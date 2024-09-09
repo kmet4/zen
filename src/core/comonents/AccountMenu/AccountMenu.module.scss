@@ -1,10 +1,13 @@
-.routeLink {
+.accountMenu {
   display: flex;
-  gap: 5px;
+
 }
 
-.navList {
+.accountInfo {
+  display: flex;
+}
+
+.container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }

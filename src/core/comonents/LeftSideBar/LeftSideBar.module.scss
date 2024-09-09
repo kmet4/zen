@@ -1,4 +1,18 @@
 .leftSideBar {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 30px;
 }

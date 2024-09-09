@@ -1,16 +1,14 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import styles from './Header.module.scss'
 
 interface IHeaderProps {
   title?: string
-  children?: ReactNode
 }
 
-export const Header: FC<IHeaderProps> = ({ title, children}) => {
+export const Header: FC<IHeaderProps> = ({ title }) => {
   return (
     <header className={styles.header}>
-      {children}
-      <div>{title}</div>
+      <h3 className={styles.title}>{title}</h3>
     </header>
   )
 }

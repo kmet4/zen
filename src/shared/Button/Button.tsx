@@ -1,5 +1,5 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 
-export const Button: FC = () => {
-  return <button>Button</button>
+export const Button: FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (buttonProps) => {
+  return <button {...buttonProps}>Post</button>
 }
