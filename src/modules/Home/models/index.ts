@@ -25,10 +25,9 @@ export interface IPost {
   id: string;
   userName: string;
   userId: string;
-  userAvatar: string;
-  title?: string;
+  userAvatar?: string;
+  title: string;
   image?: string;
-  likes: number;
-  liked: boolean;
-  comments: IComment[];
 }
+
+export type CreatePost = Omit<IPost, 'id'>;

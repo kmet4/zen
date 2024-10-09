@@ -1,5 +1,6 @@
-import { FC } from 'react'
-import styles from './AccountMenu.module.scss'
+import { FC } from 'react';
+
+import styles from './AccountMenu.module.scss';
 
 export const AccountMenu: FC = () => {
   return (
@@ -13,5 +14,5 @@ export const AccountMenu: FC = () => {
       </div>
       <div>Настройки</div>
     </div>
-  )
-}
+  );
+};

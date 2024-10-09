@@ -1,1 +1,1 @@
-export { RouteLinks } from './RouteLinks'
+export { RouteLinks } from './RouteLinks';

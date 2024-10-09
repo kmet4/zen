@@ -3,10 +3,13 @@
   flex-direction: column;
   width: 100%;
   max-width: 300px;
-  border: 1px solid #000000;
+  background-color: #eaeaea;
+  border: 1px solid #cfcfcf;
   border-radius: 15px;
   padding: 10px;
-  gap: 15px;
+  gap: 20px;
+  height: max-content;
+  box-sizing: border-box;
 }
 
 .title {

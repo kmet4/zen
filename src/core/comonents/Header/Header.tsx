@@ -1,8 +1,9 @@
-import { FC } from 'react'
-import styles from './Header.module.scss'
+import { FC } from 'react';
+
+import styles from './Header.module.scss';
 
 interface IHeaderProps {
-  title?: string
+  title?: string;
 }
 
 export const Header: FC<IHeaderProps> = ({ title }) => {
@@ -10,5 +11,5 @@ export const Header: FC<IHeaderProps> = ({ title }) => {
     <header className={styles.header}>
       <h3 className={styles.title}>{title}</h3>
     </header>
-  )
-}
+  );
+};

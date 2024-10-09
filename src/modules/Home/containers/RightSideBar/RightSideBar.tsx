@@ -1,21 +1,37 @@
-import { FC } from 'react'
-import { INews } from '@/modules/Home/models'
-import styles from './RightSideBar.module.scss'
-import { News } from '@/modules/Home/containers/News'
+import { FC, useMemo, useState } from 'react';
 
-interface IRightSideBarProps {
-  news: INews[]
-}
+import { News } from '@/modules/Home/containers/News';
+import { useAppSelector } from '@/core/hooks/useAppSelector.ts';
 
-export const RightSideBar: FC<IRightSideBarProps> = ({ news }) => {
+import styles from './RightSideBar.module.scss';
+
+import { Button } from 'antd';
+
+export const RightSideBar: FC = () => {
+  const news = useAppSelector((state) => state.home.news.apiData!);
+
+  const [newsToShow, setNewsToShow] = useState(3);
+
+  const showNewsList = useMemo(
+    () => news.slice(0, newsToShow),
+    [newsToShow, news],
+  );
+
+  const handleShowNews = () => {
+    setNewsToShow((prev) => prev + 3);
+  };
+
   return (
     <div className={styles.rightSideBar}>
       <h3 className={styles.title}>News</h3>
       <div className={styles.newsList}>
-        {news.map((news) => (
-          <News key={news.url} news={news}/>
+        {showNewsList.map((news) => (
+          <News key={news.url} news={news} />
         ))}
+        <Button type='primary' onClick={handleShowNews}>
+          Показать больше
+        </Button>
       </div>
     </div>
-  )
-}
+  );
+};

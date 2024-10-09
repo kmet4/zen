@@ -1,8 +1,11 @@
 .addPostMenu {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  border: 1px solid #000000;
-  box-sizing: border-box;
+  padding: 20px;
+  background-color: #eaeaea;
+  border: 1px solid #cfcfcf;
   border-top: none;
+  border-radius: 0 0 15px 15px;
+  margin-bottom: 15px;
+  gap: 20px;
 }

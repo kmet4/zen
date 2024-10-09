@@ -1,1 +1,1 @@
-export {AddPostMenu} from './AddPostMenu';
+export { AddPostMenu } from './AddPostMenu';
